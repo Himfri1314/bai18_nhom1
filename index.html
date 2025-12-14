@@ -1,205 +1,203 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="vi">
+  <head>
+    <meta charset = "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layla UI</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+  </head>
+   <body>
+ <style>
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+/* MENU CHÍNH */
+.menu {
+    display: flex;
+    background: #fff;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.menu-item {
+    position: relative;
+    padding: 15px 20px;
+    cursor: pointer;
+    color: #243B9A;
+    font-weight: bold;
+}
+.menu-item a {
+    color: #243B9A;
+    text-decoration: none;
+}
+.menu-item:hover,
+.menu-item a:hover {
+    color: #6699CC;
+}
+/* DROPDOWN */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 99;
+}
+.dropdown a {
+    display: block;
+    padding: 12px 20px;
+    color: #243B9A;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+}
+.dropdown a:hover {
+    background: #f0f0f0;
+    color: #000;
+}
+/* HIỂN THỊ DROPDOWN KHI HOVER */
+.menu-item:hover .dropdown {
+    display: block;
+}
+</style>
 <body>
-    <!-- Nền phía sau toàn trang -->
-    <div class="background"></div>
-    <header>
-        <style>
-  .avatar {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid #bcdcff;
-      margin-bottom: 10px;
-   }
-   full-center {
-    height: 100vh;
+<div class="menu">
+    <div class="menu-item">
+        <a href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/">TRANG CHỦ</a>
+    </div>
+    <div class="menu-item">
+        THÀNH VIÊN ▼
+        <div class="dropdown">
+           <a href="https://himfri1314.github.io/phuongduyen/">PHƯƠNG DUYÊN</a>
+            <a href="https://himfri1314.github.io/minhchau/">MINH CHÂU</a>
+            <a href="https://himfri1314.github.io/khahan/">KHẢ HÂN</a>
+            <a href="https://himfri1314.github.io/quynhnhu/">QUỲNH NHƯ</a>
+        </div>
+    </div>
+    <div class="menu-item">
+        TÀI LIỆU ▼
+        <div class="dropdown">
+            <a href="https://himfri1314.github.io/bai7_nhom1/">BÀI 7</a>
+            <a href="https://himfri1314.github.io/bai8_nhom1/">BÀI 8</a>
+            <a href="https://himfri1314.github.io/bai9_nhom1/">BÀI 9</a>
+            <a href="https://himfri1314.github.io/bai10_nhom1/">BÀI 10</a>
+            <a href="https://himfri1314.github.io/bai11_nhom1/">BÀI 11</a>
+            <a href="https://himfri1314.github.io/bai12_nhom1/">BÀI 12</a>
+            <a href="https://himfri1314.github.io/bai13_nhom1/">BÀI 13</a>
+            <a href="https://himfri1314.github.io/bai14_nhom1/">BÀI 14</a>
+            <a href="https://himfri1314.github.io/bai15_nhom1/">BÀI 15</a>
+            <a href="https://himfri1314.github.io/bai16_nhom1/">BÀI 16</a>
+            <a href="https://himfri1314.github.io/bai17_nhom1/">BÀI 17</a>
+            <a href="https://himfri1314.github.io/bai18_nhom1/">BÀI 18</a>
+        </div>
+    </div>
+</div>
+</body>
+  <body>
+     <!-- Banner -->
+    <div class="banner">
+      <style>
+        h1 {
+  text-shadow: 4px 4px 6px rgba(0,0,0,0.5);
+}
+      </style>
+        <h1 style="text-align:center;text-decorating: none; color: white; padding: 0 30px;">Bài 18: THỰC HÀNH TỔNG HỢP THIẾT KẾ TRANG WEB</h1>
+    </div>
+  </body>
+    <style>
+      body {
+    margin: 0;
+    font-family: 'Arial';
+    background-color: #f2f2f2;
+}
+      /* Banner nền ảnh */
+.banner {
+    width: 100%;
+    height: 300px;
+    background-image: url('bai18.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .full-center img {
-    width: 250px;
-  }
-</style>
-<div class="card">
-        <img src="duyen.png" class="avatar">
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Search</a>
-            <a href="#">Message</a>
-        </nav>
-        <div class="buttons">
-            <button class="login">Log in</button>
-            <button class="signup">Sign up</button>
-        </div>
-    </header>
-    <!-- Banner -->
-    <section class="banner">
-        <div class="banner-left">
-            <h1>NGUYỄN NGỌC PHƯƠNG DUYÊN</h1>
-            <p>Tôi không lười, chỉ là rất giỏi trong việc tiết kiệm năng lượng</p>
-            <a class="readmore" href="#">Read More</a>
-        </div>
-        <div class="banner-right">
-            <img src="lung linh.png" alt="">
-        </div>
-    </section>
-    <!-- Artwork + Recent -->
-    <section class="content">
-        <div class="artwork">
-            <h2>Artwork ></h2>
-            <div class="art-list">
-                <div class="art-card"><img src="art1.png"></div>
-                <div class="art-card"><img src="art2.png"></div>
-            </div>
-            <button class="viewmore">View More</button>
-        </div>
-        <div class="recent">
-            <h2>Recent Search</h2>
-            <div class="search-item">Layla ascension material</div>
-            <div class="search-item">Layla build</div>
-            <div class="search-item">Kalpalata lotus locations</div>
-            <div class="search-item">Layla cosplay</div>
-            <div class="search-item">Layla Wallpaper</div>
-        </div>
-        <div class="info">
-            <div class="info-card">
-                <h3>Cryo character</h3>
-                <p>Cryo is one of the seven Elements…</p>
-            </div>
-            <div class="info-card">
-                <h3>Sumeru</h3>
-                <p>Sumeru is one of the seven regions…</p>
-            </div>
-            <div class="info-card">
-                <h3>Akademiya</h3>
-                <p>The Sumeru Akademiya is Sumeru’s main governing body…</p>
-            </div>
-        </div>
-    </section>
-</body>
-</html>
-<style>
-    /* ✨ NỀN PHÍA SAU (background image) */
-.background {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-image: url("pd.png"); /* → CHÈN HÌNH NỀN Ở ĐÂY */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3;
-    z-index: -1;
 }
-/* font + căn tổng thể */
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #f6f7fb;
-}
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-}
-nav a {
-    margin: 0 20px;
-    font-size: 18px;
-    text-decoration: none;
-    color: #333;
-}
-.buttons button {
-    border: none;
-    padding: 10px 25px;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-.login { background: #e7e7e7; }
-.signup { background: #6e62d4; color: white; }
-/* Banner */
-.banner {
-    margin: 40px auto;
-    width: 90%;
-    background: white;
-    border-radius: 30px;
-    padding: 30px;
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-}
-.banner-left {
-    width: 45%;
-}
-.banner-left h1 {
-    font-size: 60px;
-    margin: 0;
-    color: #222;
-}
-.banner-left p {
-    font-size: 20px;
-    margin-top: 15px;
-    color: #555;
-}
-.readmore {
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #444;
+.banner h1 {
+    color: white;
+    font-size: 40px;
+    letter-spacing: 5px;
     font-weight: bold;
 }
-.banner-right img {
-    width: 350px;
-}
-/* Content layout */
-.content {
-    width: 90%;
-    margin: 40px auto;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 40px;
-}
-/* Artwork */
-.art-list {
-    display: flex;
-    gap: 20px;
-}
-.art-card img {
-    width: 140px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 20px;
-}
-.viewmore {
-    margin-top: 10px;
-    padding: 12px 30px;
-    border-radius: 25px;
-    border: none;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-/* Recent Search */
-.search-item {
-    padding: 12px 20px;
-    margin-top: 10px;
-    background: #e8effa;
-    border-radius: 15px;
-}
-/* Info cards */
-.info-card {
-    background: white;
-    padding: 20px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
+</style>
+      <div id="wp-products">
+    <h2 style="text-align:center;text-decorating: none; color: #243b9a; padding: 0 30px;">LUYỆN TẬP</h2>
+  </div>
+  <div style="background-color: #FFFFFF; padding: 10px;">
+  		<h3>LUYỆN TẬP 1: Tạo trang dang_ki.html chứa biểu mẫu đăng kí câu lạc bộ và bổ sung liên kết tới trang dang_ki trong phần cuối trang của tất cả các trang.</h3>
+  </div>
+    <p>Để tạo trang "dang_ki.html" chứa biểu mẫu đăng kí câu lạc bộ và bổ sung liên kết tới trang "dang_ki" trong phần cuối trang của tất cả các trang, em có thể làm như sau:</p>
+    <p>- Tạo tệp tin HTML mới và đặt tên là "dang_ki.html".</p>
+    <p>- Trong tệp tin "dang_ki.html", tạo biểu mẫu đăng kí câu lạc bộ bằng cách sử dụng các phần tử HTML như < form>, < input>, và < button>. Thiết kế biểu mẫu theo yêu cầu của em, bao gồm các trường nhập thông tin và nút gửi đăng kí.</p>
+    <p>- Sau khi hoàn thành biểu mẫu, em có thể thêm CSS để định dạng giao diện biểu mẫu theo ý muốn. Sử dụng các lớp CSS để tạo kiểu cho các phần tử trong biểu mẫu.</p>
+    <p>- Sau khi tạo xong trang "dang_ki.html", em cần bổ sung liên kết tới trang "dang_ki" trong phần cuối trang của tất cả các trang khác trong website.</p>
+   <div style="background-color: #FFFFFF; padding: 10px;">
+  		<h3>LUYỆN TẬP 2: Thay đổi định dạng và màu sắc của phông chữ trong các vùng khi di chuyển chuột qua.</h3> 
+  </div>
+      <p>Để thay đổi định dạng và màu sắc của phông chữ trong các vùng khi di chuyển chuột qua, em có thể sử dụng hiệu ứng hover trong CSS.</p>
+      <p>Ví dụ:</p>
+      <img src="luyen-tap-2-trang-105.png" class="img-nho">
+<style>
+  .img-nho {
+    width: 500px;      /* chỉnh kích thước */
+    height: auto;      /* giữ đúng tỉ lệ */
+  }
+</style>
+        <div id="wp-products">
+    <h2 style="text-align:center;text-decorating: none; color: #243b9a; padding: 0 30px;">VẬN DỤNG</h2>
+  </div>
+          <div style="background-color: #FFFFFF; padding: 10px;">
+        <h3>Hãy đưa ra một thiết kế khác cho website đã tạo ở phần Thực hành. Viết định dạng theo thiết kế mới và chuyển toàn bộ website sang định dạng mới.</h3>
+          </div>
+<p>Để áp dụng thiết kế mới cho trang web đã tạo trong phần Thực hành, em cần thực hiện các bước sau:</p>
+<p>- Tạo một tệp CSS mới và đặt tên là "style.css" (hoặc tên tùy chọn khác).</p>
+<p>- Trong tệp CSS, thêm mã CSS để định dạng các phần tử theo thiết kế mới.</p>
+<p>Ví dụ:</p>
+<p>/* Định dạng phần banner */</p>
+<p>.banner {</p>
+<p>background: url("../assets/img/bg-masthead.jpg") no-repeat center center;</p>
+<p>background-size: cover;</p>
+<p>padding-top: 12rem;</p>
+<p>padding-bottom: 12rem;</p>
+<p>text-align: center;</p>
+<p>color: darkred;</p>
+<p>}</p>
+<p>.banner h2 {</p>
+<p>font-size: 36px;</p>
+<p>font-weight: bold;</p>
+<p>}</p>
+<p>/* Định dạng phần slogan */</p>
+<p>.slogan {</p>
+<p>background-color: rgb(248, 249, 250);</p>
+<p>text-align: center;</p>
+<p>padding-right: 0.5rem;</p>
+<p>padding-left: 3rem;</p>
+<p>padding-top: 7rem;</p>
+<p>padding-bottom: 7rem;</p>
+<p>}</p>
+<p>.row {</p>
+<p>display: flex;</p>
+<p>flex-wrap: wrap;</p>
+<p>margin-top: -1;</p>
+<p>max-width: 100%;</p>
+<p>padding-right: 3rem;</p>
+<p>padding-left: 3rem;</p>
+<p>}</p>
+<p>.block_3 {</p>
+<p>flex: 0 0 33.33333333%;</p>
+<p>}</p>
+<p>.block_3 h3 {</p>
+<p>font-size: 24px;</p>
+<p>font-weight: bold;</p>
+<p>}</p>
+<p>.text-content {</p>
+<p>font-size: 16px;</p>
+<p>color: #333;</p>
+<p>}</p>
